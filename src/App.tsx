@@ -28,7 +28,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import "./App.less";
-import Routers from "./config/router";
+import GetRouters from "./config/routes";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,7 +37,7 @@ function App() {
     // <HashRouter>
     <div>
       <BrowserRouter>
-        <Routers />
+        <GetRouters />
         {/* </HashRouter> */}
       </BrowserRouter>
     </div>
