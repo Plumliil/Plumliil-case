@@ -1,0 +1,98 @@
+.masonry {
+    position: relative;
+    column-count: 6;
+    column-gap: 0;
+    overflow-x: hidden;
+    .mask{
+      z-index: 9;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // height: 948px;
+      background-color: #030303a4;
+    }
+    .preview {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 99;
+    }
+    .item {
+      padding: 3px;
+      position: relative;
+      counter-increment: item-counter;
+      overflow: hidden;
+      text-align: center;
+      .urlCard {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 40px;
+        line-height: 40px;
+        transition: 1s;
+        opacity: 0;
+        left: 0;
+        border-radius: 0;
+        p {
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+          font-weight: 600;
+        }
+      }
+  
+      img {
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: 1s;
+      }
+      &:hover .urlCard {
+        opacity: 1;
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+      &::before {
+        z-index: 8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "👀图片预览👀";
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: aliceblue;
+        left: 0;
+        background-color: #00000077;
+        opacity: 0;
+        transition: 1s;
+      }
+      &:hover::before {
+        opacity: 1;
+      }
+      &::after {
+        position: absolute;
+        display: block;
+        top: 2px;
+        left: 2px;
+        //   width: 24px;
+        width: auto;
+        padding: 0 5px;
+        height: 24px;
+        text-align: center;
+        line-height: 24px;
+        color: aliceblue;
+        content: counter(item-counter);
+        background-color: #000;
+      }
+    }
+  }
+  
