@@ -1,14 +1,34 @@
 import axios from "axios";
 
-const instance = axios.create({
-  // baseURL:ProcessingInstruction.env
-  timeout: 5000,
+const request = axios.create({
+  // baseURL: "http://localhost:3000/", // url = base url + request url
+  timeout: 5000, // request timeout
 });
-instance.defaults.headers.common.Authorization = `bearer ${localStorage.getItem(
-  "Authorization"
-)}`;
-instance.defaults.headers.post["Content-Type"] = "application/json";
-instance.defaults.headers.put["Content-Type"] = "application/json";
-instance.defaults.timeout = 0;
 
-export default instance;
+request.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    console.log(error); // for debug
+    return Promise.reject(error);
+  }
+);
+
+request.interceptors.response.use(
+  (response) => {
+    const res = response.data;
+    if (res.code !== 200) {
+      console.log("接口信息报错", res.message);
+      return Promise.reject(new Error(res.message || "Error"));
+    } else {
+      return res;
+    }
+  },
+  (error) => {
+    console.log("接口信息报错" + error);
+    return Promise.reject(error);
+  }
+);
+
+export default request;

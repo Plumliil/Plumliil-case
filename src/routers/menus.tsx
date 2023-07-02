@@ -2,6 +2,7 @@ import { MenuProps } from "antd";
 import {
   HomeOutlined,
   SettingOutlined,
+  HeatMapOutlined,
   DeploymentUnitOutlined,
 } from "@ant-design/icons";
 const menuOptions: MenuProps["items"] = [
@@ -19,6 +20,10 @@ const menuOptions: MenuProps["items"] = [
         label: "建表语句转TS类型",
         key: "/tools/totstype",
       },
+      // {
+      //   label: "Mock数据",
+      //   key: "/tools/mockdata",
+      // },
     ],
   },
   {
@@ -30,7 +35,16 @@ const menuOptions: MenuProps["items"] = [
         label: "瀑布流",
         key: "/examples/waterfall",
       },
+      {
+        label: "自定义Hook",
+        key: "/examples/myHook",
+      },
     ],
+  },
+  {
+    label: "DEMO",
+    icon: <HeatMapOutlined />,
+    key: "/demo",
   },
 ];
 

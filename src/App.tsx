@@ -36,8 +36,10 @@ function App() {
               <Menu
                 style={{
                   height: 40,
+                  width: "380px",
                   lineHeight: "40px",
                 }}
+                defaultOpenKeys={["demo"]}
                 subMenuCloseDelay={0.3}
                 forceSubMenuRender={true}
                 onClick={onClick}

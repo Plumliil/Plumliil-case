@@ -1,7 +1,7 @@
 import Home from "../views/home";
 import Demo from "../views/demo";
-import { ToTsType } from "../views/tools";
-import { Waterfall } from "../views/examples";
+import { MockData, ToTsType } from "../views/tools";
+import { MyHook, Waterfall } from "../views/examples";
 
 const routes = [
   {
@@ -21,6 +21,10 @@ const routes = [
         path: "totstype",
         element: <ToTsType />,
       },
+      {
+        path: "mockdata",
+        element: <MockData />,
+      },
     ],
   },
   {
@@ -29,6 +33,10 @@ const routes = [
       {
         path: "Waterfall",
         element: <Waterfall />,
+      },
+      {
+        path: "myHook",
+        element: <MyHook />,
       },
     ],
   },
