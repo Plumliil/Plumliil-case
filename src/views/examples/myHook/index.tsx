@@ -3,7 +3,7 @@ import Tree, { DataNode, TreeProps } from "antd/es/tree";
 import React, { useRef, useState } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { CodeArea } from "@/components";
-const useTreeHandle = (TreeData: DataNode[]) => {
+const useTreeHandler = (TreeData: DataNode[]) => {
   const [gData, setGData] = useState(JSON.parse(JSON.stringify(TreeData)));
   /**
    * 插入子级
@@ -281,7 +281,7 @@ const index = () => {
     deleteNodeByKey,
     updateTreeDataByKey,
     moveNodeInTreeByKey,
-  } = useTreeHandle(treeData);
+  } = useTreeHandler(treeData);
   const treeNode = useRef<DataNode>();
   const onSelect: TreeProps["onSelect"] = (selectedKeys, info) => {};
   const items: MenuProps["items"] = [

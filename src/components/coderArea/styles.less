@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.textarea {
+  /* 设置滚动条的样式 */
+  &::-webkit-scrollbar {
+    width: 5px; /* 设置滚动条的宽度 */
+    cursor: pointer;
+  }
+
+  /* 设置滚动条的轨道样式 */
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* 设置轨道的背景色 */
+  }
+
+  /* 设置滚动条的滑块样式 */
+  &::-webkit-scrollbar-thumb {
+    background-color: #afadad; /* 设置滑块的背景色 */
+  }
+
+  /* 设置滚动条的滑块在hover状态下的样式 */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 设置滑块在hover状态下的背景色 */
+  }
+}
+.writeArea {
+  background-color: black;
+  color: aliceblue;
+  resize: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  &:disabled {
+    opacity: 1;
+    background-color: #222222;
+    -webkit-text-fill-color: aliceblue;
+    cursor: pointer;
+  }
+}
+.readArea {
+  resize: none;
+  width: 480px;
+  min-height: 650px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}

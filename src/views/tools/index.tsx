@@ -1,3 +1,3 @@
 import ToTsType from "./toTsType";
-
-export { ToTsType };
+import MockData from "./mockData";
+export { ToTsType, MockData };

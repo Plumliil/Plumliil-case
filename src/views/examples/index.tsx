@@ -1,3 +1,3 @@
 import Waterfall from "./waterfall";
-
-export { Waterfall };
+import MyHook from "./myHook";
+export { Waterfall, MyHook };
