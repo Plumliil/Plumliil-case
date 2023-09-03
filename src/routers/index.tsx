@@ -1,7 +1,13 @@
 import Home from "../views/home";
 import Demo from "../views/demo";
-import { MockData, ToTsType } from "../views/tools";
-import { MyHook, Waterfall } from "../views/examples";
+import {
+  ColorConversion,
+  MockData,
+  TemplateGen,
+  ToTsType,
+  Encrypt
+} from "../views/tools";
+import { MyHook, Waterfall, TextComparison } from "../views/examples";
 
 const routes = [
   {
@@ -22,8 +28,20 @@ const routes = [
         element: <ToTsType />,
       },
       {
+        path: "encrypt",
+        element: <Encrypt />,
+      },
+      {
+        path: "colorConversion",
+        element: <ColorConversion />,
+      },
+      {
         path: "mockdata",
         element: <MockData />,
+      },
+      {
+        path: "templateGen",
+        element: <TemplateGen />,
       },
     ],
   },
@@ -37,6 +55,10 @@ const routes = [
       {
         path: "myHook",
         element: <MyHook />,
+      },
+      {
+        path: "textComparison",
+        element: <TextComparison />,
       },
     ],
   },

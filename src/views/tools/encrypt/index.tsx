@@ -1,46 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Button, Card, Tabs, message } from "antd";
 import { CodeArea } from "@/components";
 import TextArea from "antd/es/input/TextArea";
 import request from "@/utils/request";
 
-const getMockData = async (params: any) => {
-  return request.get("/api/mock/base", {
-    params,
+type Tab = {
+  label: string;
+  key: string;
+  children: ReactNode;
+};
+
+const getEncryptStr = async (urlType: string, params: any) => {
+  return request.post("/api/encrypt/" + urlType, {
+    data: params,
   });
 };
-const params = {
-  "list|10": [
-    {
-      "id|+1": 1,
-    },
-  ],
-};
-function wrapValuesWithQuotes(str: string) {
-  const regex = /("?:[^\s:,]*)("|')(?:,|})/g;
-  const updatedObj = str.replace(regex, '$1"$2,');
-  return JSON.parse(updatedObj);
-}
+const tabs: Tab[] = [
+  {
+    label: "DES",
+    key: "2",
+    children: <h1>DES</h1>,
+  },
+  {
+    label: "Rabbit",
+    key: "3",
+    children: <h1>DES</h1>,
+  },
+  {
+    label: "RC4",
+    key: "4",
+    children: <h1>DES</h1>,
+  },
+  {
+    label: "TripleDES",
+    key: "5",
+    children: <h1>DES</h1>,
+  },
+];
+
 const MockData = () => {
   const [beforeValue, setBeforeValue] = useState("");
   const [afterValue, setAfterValue] = useState("");
 
-  const getData = async () => {
-    // console.log(beforeValue);
-    const transStr = wrapValuesWithQuotes(beforeValue);
-
-    // console.log(typeof beforeValue);
-    // console.log(typeof transStr);
-
-    // const mockData = await getMockData(JSON.parse(beforeValue));
-    // if (mockData.data.ok) {
-    //   message.success("success");
-    //   console.log(mockData.data);
-    // }
+  const getEncodeData = async () => {
+    const res = await getEncryptStr("encode", {
+      target: "target",
+      appId: "key",
+      type: "AES" + "encode",
+    });
+    console.log(res);
+  };
+  const getDecodeData = async () => {
+    getEncryptStr("decode", {
+      target: "target",
+      appId: "key",
+      type: "AES" + "decode",
+    });
   };
   return (
     <div>
-      <h3>Data Mock</h3>
+      <h3>加解密</h3>
       <Card>
         <Tabs
           defaultActiveKey="1"
@@ -48,7 +67,7 @@ const MockData = () => {
           style={{ height: 220 }}
           items={[
             {
-              label: "模板Mock",
+              label: "AES",
               key: "1",
               children: (
                 <div
@@ -61,25 +80,24 @@ const MockData = () => {
                   <CodeArea
                     isRead={false}
                     onChange={(e) => {
-                      // console.log(e.target.value);
+                      console.log(e.target.value);
 
                       setBeforeValue(e.target.value);
                     }}
                     value={beforeValue}
                     disabled
                   />
-                  <Button type="primary" onClick={getData}>
-                    转换
+                  <Button type="primary" onClick={getEncodeData}>
+                    加密
+                  </Button>
+                  <Button type="primary" onClick={getDecodeData}>
+                    解密
                   </Button>
                   <CodeArea isRead={true} value={afterValue} disabled />
                 </div>
               ),
             },
-            {
-              label: "tab2",
-              key: "2",
-              children: <TextArea disabled defaultValue={"asjdajskldj"} />,
-            },
+            ...tabs,
           ]}
         />
       </Card>

@@ -1,0 +1,177 @@
+export const data_01 = [
+  {
+    // 项目名称
+    projectName: "汽车生产项目",
+    // 供应商名称
+    supplierName: "米其林轮进口直乘用车轮胎55R16营仓",
+    // 采购单名称
+    purchaseOrderName: "乘用车轮胎55R16",
+    // 付款申请单号
+    paymentApplicationNumber: "P01890230450",
+    // 付款申请类型
+    paymentRequestType: "物料采购",
+    // 预算科目
+    budgetAccount: "固定资产",
+    // 会计科目
+    ledgerAccount: "固定资产-汽车",
+    // 金额
+    amount: "32500",
+    // 付款状态
+    paymentStatus: "已付款",
+    // 申请日期
+    dateApplication: "2023-07-05",
+    // 截止日期
+    deadline: "2023-07-30",
+    // 实际付款日期
+    actualPaymentDate: "2023-07-21",
+    projectYear: "2023",
+    projectClassification: "isProject",
+  },
+];
+
+export const data = [
+  {
+    name: "张三",
+    subjectYuWen: "110",
+    subjectShuXue: "105",
+    subjectYingYu: "100",
+    ranking: "1",
+    class: "one",
+    grade: "高一",
+  },
+  {
+    name: "李四",
+    subjectYuWen: "90",
+    subjectShuXue: "95",
+    subjectYingYu: "98",
+    ranking: "2",
+    class: "one",
+    grade: "高一",
+  },
+  {
+    name: "王五",
+    subjectYuWen: "85",
+    subjectShuXue: "92",
+    subjectYingYu: "88",
+    ranking: "3",
+    class: "one",
+    grade: "高一",
+  },
+  {
+    name: "赵六",
+    subjectYuWen: "95",
+    subjectShuXue: "88",
+    subjectYingYu: "92",
+    ranking: "4",
+    class: "one",
+    grade: "高一",
+  },
+  {
+    name: "陈七",
+    subjectYuWen: "80",
+    subjectShuXue: "85",
+    subjectYingYu: "90",
+    ranking: "5",
+    class: "one",
+    grade: "高一",
+  },
+  {
+    name: "刘八",
+    subjectYuWen: "98",
+    subjectShuXue: "92",
+    subjectYingYu: "96",
+    ranking: "1",
+    class: "two",
+    grade: "高一",
+  },
+  {
+    name: "黄九",
+    subjectYuWen: "92",
+    subjectShuXue: "87",
+    subjectYingYu: "90",
+    ranking: "2",
+    class: "two",
+    grade: "高一",
+  },
+  {
+    name: "周十",
+    subjectYuWen: "88",
+    subjectShuXue: "94",
+    subjectYingYu: "85",
+    ranking: "3",
+    class: "two",
+    grade: "高一",
+  },
+  {
+    name: "钱十一",
+    subjectYuWen: "93",
+    subjectShuXue: "91",
+    subjectYingYu: "87",
+    ranking: "4",
+    class: "two",
+    grade: "高一",
+  },
+  {
+    name: "孙十二",
+    subjectYuWen: "87",
+    subjectShuXue: "85",
+    subjectYingYu: "91",
+    ranking: "5",
+    class: "two",
+    grade: "高一",
+  },
+  {
+    name: "周十三",
+    subjectYuWen: "96",
+    subjectShuXue: "93",
+    subjectYingYu: "88",
+    ranking: "1",
+    class: "three",
+    grade: "高一",
+  },
+  {
+    name: "吴十四",
+    subjectYuWen: "91",
+    subjectShuXue: "89",
+    subjectYingYu: "84",
+    ranking: "2",
+    class: "three",
+    grade: "高一",
+  },
+  {
+    name: "郑十五",
+    subjectYuWen: "85",
+    subjectShuXue: "87",
+    subjectYingYu: "92",
+    ranking: "3",
+    class: "three",
+    grade: "高一",
+  },
+  {
+    name: "马十六",
+    subjectYuWen: "89",
+    subjectShuXue: "83",
+    subjectYingYu: "87",
+    ranking: "4",
+    class: "three",
+    grade: "高一",
+  },
+  {
+    name: "何十七",
+    subjectYuWen: "84",
+    subjectShuXue: "82",
+    subjectYingYu: "89",
+    ranking: "5",
+    class: "three",
+    grade: "高一",
+  },
+  {
+    name: "曾十八",
+    subjectYuWen: "94",
+    subjectShuXue: "90",
+    subjectYingYu: "93",
+    ranking: "1",
+    class: "one",
+    grade: "高二",
+  },
+];

@@ -1,3 +1,4 @@
 import Waterfall from "./waterfall";
 import MyHook from "./myHook";
-export { Waterfall, MyHook };
+import TextComparison from "./textComparison";
+export { Waterfall, MyHook, TextComparison };

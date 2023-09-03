@@ -20,9 +20,25 @@ const menuOptions: MenuProps["items"] = [
         label: "建表语句转TS类型",
         key: "/tools/totstype",
       },
+      {
+        label: "颜色转换",
+        key: "/tools/colorConversion",
+      },
+      {
+        label: "加解密",
+        key: "/tools/encrypt",
+      },
+      // {
+      //   label: "模板生成",
+      //   key: "/tools/templateGen",
+      // },
       // {
       //   label: "Mock数据",
       //   key: "/tools/mockdata",
+      // },
+      // {
+      //   label: "文本对比",
+      //   key: "/tools/TextComparison",
       // },
     ],
   },
@@ -38,6 +54,10 @@ const menuOptions: MenuProps["items"] = [
       {
         label: "自定义Hook",
         key: "/examples/myHook",
+      },
+      {
+        label: "文本对比",
+        key: "/examples/TextComparison",
       },
     ],
   },

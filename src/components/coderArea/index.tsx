@@ -1,7 +1,6 @@
 import { Card, Dropdown, MenuProps } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import React, { useEffect, useState } from "react";
-import data from "./test";
 import "./styles.less";
 type CodeAreaProps = {
   value: string;
@@ -79,7 +78,7 @@ function CodeArea(props: CodeAreaProps) {
         )}
       </Dropdown>
     </Card>
-  ); 
+  );
 }
 
 export default CodeArea;

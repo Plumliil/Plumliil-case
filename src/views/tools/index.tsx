@@ -1,3 +1,6 @@
 import ToTsType from "./toTsType";
 import MockData from "./mockData";
-export { ToTsType, MockData };
+import ColorConversion from "./colorConversion";
+import TemplateGen from "./templateGen";
+import Encrypt from "./encrypt";
+export { ToTsType, MockData, ColorConversion, TemplateGen,Encrypt };
