@@ -1,30 +1,30 @@
-import Home from "../views/home";
-import Demo from "../views/demo";
+import Home from '../views/home'
+import Demo from '../views/demo'
 import {
   ColorConversion,
   MockData,
   TemplateGen,
   ToTsType,
-  Encrypt
-} from "../views/tools";
-import { MyHook, Waterfall, TextComparison } from "../views/examples";
+  Encrypt,
+} from '../views/tools'
+import { MyHook, Waterfall, TextComparison } from '../views/examples'
 
 const routes = [
   {
-    path: "/",
-    name: "home",
+    path: '/',
+    name: 'home',
     element: <Home />,
   },
   {
-    path: "/demo",
-    name: "demo",
+    path: '/demo',
+    name: 'demo',
     element: <Demo />,
   },
   {
-    path: "/tools",
+    path: '/tools',
     children: [
       {
-        path: "totstype",
+        path: 'totstype',
         element: <ToTsType />,
       },
       // {
@@ -40,28 +40,36 @@ const routes = [
       //   element: <MockData />,
       // },
       {
-        path: "templateGen",
+        path: 'templateGen',
         element: <TemplateGen />,
       },
     ],
   },
   {
-    path: "/examples",
+    path: '/examples',
     children: [
       {
-        path: "Waterfall",
+        path: 'Waterfall',
         element: <Waterfall />,
       },
       {
-        path: "myHook",
+        path: 'myHook',
         element: <MyHook />,
       },
       {
-        path: "textComparison",
+        path: 'textComparison',
         element: <TextComparison />,
       },
     ],
   },
-];
+  {
+    path: '/vue-micro',
+    name: 'vue-micro',
+  },
+  // {
+  //   path: '/vue-micro/textCompare',
+  //   name: 'textCompare',
+  // },
+]
 
-export default routes;
+export default routes

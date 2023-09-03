@@ -51,6 +51,7 @@ function App() {
           </Affix>
         </header>
         <main>
+          <div id="vue-micro"></div>
           <GetRouters></GetRouters>
         </main>
         <footer>

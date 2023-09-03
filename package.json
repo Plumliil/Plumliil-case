@@ -17,6 +17,7 @@
     "less": "^4.1.3",
     "liilib": "^1.0.1",
     "mergely-react": "^1.0.3",
+    "qiankun": "^2.10.13",
     "rc-input-number": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
