@@ -27,18 +27,18 @@ const routes = [
         path: "totstype",
         element: <ToTsType />,
       },
-      {
-        path: "encrypt",
-        element: <Encrypt />,
-      },
-      {
-        path: "colorConversion",
-        element: <ColorConversion />,
-      },
-      {
-        path: "mockdata",
-        element: <MockData />,
-      },
+      // {
+      //   path: "encrypt",
+      //   element: <Encrypt />,
+      // },
+      // {
+      //   path: "colorConversion",
+      //   element: <ColorConversion />,
+      // },
+      // {
+      //   path: "mockdata",
+      //   element: <MockData />,
+      // },
       {
         path: "templateGen",
         element: <TemplateGen />,
