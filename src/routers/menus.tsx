@@ -59,6 +59,20 @@ const menuOptions: MenuProps["items"] = [
         label: "文本对比",
         key: "/examples/TextComparison",
       },
+      {
+        label: "pdf预览",
+        key: "/examples/pdfPreview",
+        children: [
+          {
+            label: "Vue3",
+            key: "/vueMicro/pdfPreview",
+          },
+          {
+            label: "React",
+            key: "/reactMicro/pdfPreview",
+          },
+        ]
+      },
     ],
   },
   {

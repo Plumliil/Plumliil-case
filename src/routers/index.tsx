@@ -7,7 +7,7 @@ import {
   ToTsType,
   Encrypt,
 } from '../views/tools'
-import { MyHook, Waterfall, TextComparison } from '../views/examples'
+import { MyHook, Waterfall, TextComparison, PdfView } from '../views/examples'
 
 const routes = [
   {
@@ -59,6 +59,10 @@ const routes = [
       {
         path: 'textComparison',
         element: <TextComparison />,
+      },
+      {
+        path: 'pdfview',
+        element: <PdfView />,
       },
     ],
   },

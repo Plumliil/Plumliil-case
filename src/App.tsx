@@ -32,12 +32,13 @@ function App() {
       <section id="container">
         <header>
           <Affix offsetTop={0}>
-            <Card className="headBar">
+            <Card style={{zIndex:99999}} className="headBar">
               <Menu
                 style={{
                   height: 40,
                   width: "380px",
                   lineHeight: "40px",
+                  zIndex: 99999
                 }}
                 defaultOpenKeys={["demo"]}
                 subMenuCloseDelay={0.3}
@@ -52,6 +53,7 @@ function App() {
         </header>
         <main>
           <div id="vue-micro"></div>
+          <div id="react-micro"></div>
           <GetRouters></GetRouters>
         </main>
         <footer>
