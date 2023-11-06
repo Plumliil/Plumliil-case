@@ -66,14 +66,6 @@ const routes = [
       },
     ],
   },
-  {
-    path: '/vue-micro',
-    name: 'vue-micro',
-  },
-  // {
-  //   path: '/vue-micro/textCompare',
-  //   name: 'textCompare',
-  // },
 ]
 
 export default routes

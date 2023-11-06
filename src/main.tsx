@@ -10,9 +10,9 @@ import { BrowserRouter } from 'react-router-dom'
 
 registerMicroApps([
   {
-    name: 'vue-micro',
-    entry: 'http://127.0.0.1:3002',
-    container: '#vue-micro',
+    name: 'vue-micro', // 子应用名称
+    entry: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:3002' : '/vmicro',
+    container: '#vue-micro', // 挂载子应用dom
     activeRule: '/vueMicro',
   },
   {

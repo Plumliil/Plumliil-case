@@ -4,14 +4,15 @@ import { Outlet } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      {/* <img
+      <img
         style={{
           width: "15%",
+          marginTop: 100
         }}
-        src="https://img1.imgtp.com/2023/06/24/AcaaPEta.png"
+        src="http://180.76.195.252:3366/image/logo.png"
         alt=""
-      /> */}
-      <h1>PLUMLIIL</h1>
+      />
+      {/* <h1>PLUMLIIL</h1> */}
     </div>
   );
 };

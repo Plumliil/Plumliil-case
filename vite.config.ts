@@ -30,6 +30,14 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""), // 不可以省略rewrite
       },
+      '/vueMicro/': {
+        target: 'http://localhost:3002',
+        changeOrigin: true,
+      },
+      '/reactMicro/': {
+        target: 'http://localhost:3003',
+        changeOrigin: true,
+      },
     },
   },
 });

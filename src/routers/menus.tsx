@@ -59,27 +59,46 @@ const menuOptions: MenuProps["items"] = [
         label: "文本对比",
         key: "/examples/TextComparison",
       },
-      {
-        label: "pdf预览",
-        key: "/examples/pdfPreview",
-        children: [
-          {
-            label: "Vue3",
-            key: "/vueMicro/pdfPreview",
-          },
-          {
-            label: "React",
-            key: "/reactMicro/pdfPreview",
-          },
-        ]
-      },
+      // {
+      //   label: "pdf预览",
+      //   key: "/examples/pdfPreview",
+      //   children: [
+      //     {
+      //       label: "Vue3",
+      //       key: "/vueMicro/pdfPreview",
+      //     },
+      //     // {
+      //     //   label: "Vue3-2",
+      //     //   key: "/vueMicro/pdfView",
+      //     // },
+      //     {
+      //       label: "React",
+      //       key: "/reactMicro/pdfPreview",
+      //     },
+      //   ]
+      // },
     ],
   },
   {
-    label: "DEMO",
+    label: "Micro",
     icon: <HeatMapOutlined />,
-    key: "/demo",
+    key: "/micro",
+    children: [
+      {
+        label: "Vue3 Micro",
+        key: "/vueMicro",
+      },
+      {
+        label: "React Micro",
+        key: "/reactMicro",
+      },
+    ],
   },
+  // {
+  //   label: "DEMO",
+  //   icon: <HeatMapOutlined />,
+  //   key: "/demo",
+  // },
 ];
 
 export default menuOptions;
